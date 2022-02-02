@@ -1,0 +1,154 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --standard-dark-color: #98d671;
+    --standard-color: #9be979;
+    --standard-light-color: ;
+
+    --contrast-color: #ff5b5b;
+    --contrast-light-color: #ff7a7a;
+    --contrast-lighter-color: #ffacac;
+
+    --dark-theme: #121212; 
+
+    --font-01: #fff;
+    --font-02: #cfcece;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+.nav {
+    background: var(--dark-theme);
+    height: 83px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-burger {
+    cursor: pointer;
+    display: none;
+}
+
+.burger-line {
+    background: var(--standard-color);
+    width: 40px;
+    height: 2px;
+    margin: 9px;
+    transition: .3s;
+}
+
+.nav-burger:hover .burger-line {
+    background: var(--contrast-color);   
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    transition: .5s;
+}
+
+.nav-link {
+    margin: 0px 32px;
+}
+
+.nav-link > a {
+    color: var(--standard-color);
+    font-size: 22px;
+    font-weight: 300;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.nav-link > a:hover {
+    color: var(--contrast-color);
+}
+
+.nav-line {
+    background: var(--standard-color);
+    width: 90%;
+    height: 3px;
+    margin: auto;
+    margin-top: -3px;
+}
+
+.nav-links.on {
+    transform: translateX(0);
+}
+
+#line-01.burger-line.on {
+    transform: rotate(45deg) translateY(7px);
+}
+
+#line-02.burger-line.on {
+    display: none;
+}
+
+#line-03.burger-line.on {
+    transform: rotate(-45deg) translateY(-7px);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .nav {
+        justify-content: space-between;
+        padding: 0px 42px;
+    }
+    .nav-burger {
+        display: block;
+    }
+    .nav-links {
+        background: var(--standard-color);
+        position: fixed;
+        width: 300px;
+        height: 360px;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 22px;
+        right: 0;
+        top: 80px;
+        transform: translateX(100%);
+    }
+    .nav-link {
+        opacity: 0;
+    }
+    .nav-link > a {
+        color: var(--font-01);
+        font-weight: 400;
+    }
+    .nav-link > a:hover {
+        color: var(--contrast-light-color);
+    }
+    .nav-line {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .nav-links {
+        width: 100%;
+    }
+}
