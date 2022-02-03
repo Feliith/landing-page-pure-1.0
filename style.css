@@ -14,6 +14,7 @@
 
     --font-01: #fff;
     --font-02: #cfcece;
+    --font-o3: #acacac;
 }
 
 * {
@@ -112,10 +113,119 @@ body {
 
 
 
+.introduction {
+    background: var(--dark-theme);
+    display: flex;
+    height: 500px;
+}
+
+.introduction > div {
+    flex: 1;
+}
+
+.introduction-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 70px;
+    margin-top: 80px;
+}
+
+.introduction-text > p, h1 {
+    color: var(--font-01);
+    width: 94%;
+}
+
+.introduction-text > h1 {
+    margin-bottom:32px;
+    font-size: 42px;
+    font-weight: 500;
+    animation: rightFadeIn .5s;
+}
+
+.introduction-text > p {
+    color: var(--font-02);
+    margin-bottom:64px;
+    font-size: 24px;
+    font-weight: 300;
+    opacity: 0;
+    animation: rightFadeIn .5s forwards .2s;
+}
+
+.introduction-text > h1 > span {
+    color: var(--contrast-color);
+}
+
+.snake-machine {
+    width: 46%;
+    position: absolute;
+    transition: 1s ease-in;
+}
+
+#machine-on {
+    opacity: 0;
+}
+
+.introduction-text > button {
+    background: linear-gradient(95deg, var(--contrast-color), var(--contrast-lighter-color), var(--contrast-light-color));
+    background-size: 200%;
+    background-position: left;
+    color: var(--font-01);
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 18px 42px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .5s;
+    opacity: 0;
+    animation: rightFadeIn .5s forwards .4s;
+}
+
+.introduction-text > button:hover {
+    background-position: right;
+    color: var(--dark-theme);
+}
+
+@keyframes rightFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .introduction {
+        height: 540px;
+    }
+    .snake-machine {
+        top: 140px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .introduction {
+        height: 560px;
+    }
+    .snake-machine {
+        top: 160px;
+    }
+}
+
+/* 800px > Nav */
 @media screen and (max-width: 800px) {
     .nav {
         justify-content: space-between;
         padding: 0px 42px;
+        height: 73px;
     }
     .nav-burger {
         display: block;
@@ -129,8 +239,9 @@ body {
         justify-content: space-around;
         padding: 22px;
         right: 0;
-        top: 80px;
+        top: 73px;
         transform: translateX(100%);
+        z-index: 10;
     }
     .nav-link {
         opacity: 0;
@@ -147,8 +258,96 @@ body {
     }
 }
 
+/* 800px > Introduction */
+@media screen and (max-width: 800px) {
+    .introduction {
+        flex-direction: column;
+        height: 560px;
+    }
+    .introduction-text {
+        margin-top: 200px;
+        padding: 52px;
+    }
+    .introduction-text > h1 {
+        font-size: 36px;
+        margin-bottom: 22px;
+    }
+    .introduction-text > p {
+        font-size: 22px;
+        margin-bottom: 46px;
+    }
+    .introduction-text > button {
+        font-size: 22px;
+        padding: 16px 38px;
+    }
+    .introduction-image {
+        width: 100%;
+    }
+    .snake-machine {
+        top: 108px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .introduction {
+        height: 600px;
+    }
+    .introduction-text {
+        margin-top: 220px;
+    }
+    .snake-machine {
+        top: 108px;
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .introduction {
+        height: 660px;
+    }
+    .introduction-text > p {
+        font-size: 20px;
+    }
+    .snake-machine {
+        top: 88px;
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .introduction {
+        height: 700px;
+    }
+    .introduction-text {
+        padding: 42px;
+        margin-top: 240px;
+    }
+}
+
 @media screen and (max-width: 400px) {
     .nav-links {
         width: 100%;
+    }
+    .introduction {
+        height: 740px;
+    }
+    .introduction-text {
+        padding: 22px;
+        margin-top: 260px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .introduction {
+        height: 780px;
+    }
+    .introduction-text {
+        padding: 18px;
+    }
+    .introduction-text > p {
+        font-size: 18px;
     }
 }

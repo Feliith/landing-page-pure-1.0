@@ -26,3 +26,18 @@ const Burger = () => {
     })
 }
 Burger()
+
+const machineAnimation = () => {
+
+    const machineOn = document.querySelector('#machine-on')
+
+    setTimeout(() => {
+        machineOn.style.opacity = '1'
+        setTimeout(() => {
+            machineOn.style.opacity = ''
+            machineAnimation()
+        }, 3000)
+    }, 3000)
+
+}
+machineAnimation()
