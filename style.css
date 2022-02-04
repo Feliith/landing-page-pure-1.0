@@ -10,7 +10,8 @@
     --contrast-light-color: #ff7a7a;
     --contrast-lighter-color: #ffacac;
 
-    --dark-theme: #121212; 
+    --dark-theme: #121212;
+    --dark-theme-02: #242424; 
 
     --font-01: #fff;
     --font-02: #cfcece;
@@ -200,6 +201,53 @@ body {
     }
 }
 
+.introduction-wave {
+    background: var(--dark-theme-02);
+}
+
+
+
+.technologies {
+    background: var(--dark-theme-02);
+    display: flex;
+    margin-top: -8px;
+}
+
+.technologies-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    padding-left: 64px;
+    padding-bottom: 20px;
+}
+
+.technologies-text > h1 {
+    color: var(--font-01);
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+
+.technologies-text > p {
+    color: var(--font-02);
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.technologies-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.technologies-image > img {
+    width: 70%;
+}
+
 
 
 @media screen and (max-width: 1000px) {
@@ -302,6 +350,10 @@ body {
         top: 108px;
         width: 220px;
     }
+
+    .technologies-text > p {
+        font-size: 22px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -315,6 +367,16 @@ body {
         top: 88px;
         width: 240px;
     }
+
+    .technologies-text {
+        padding: 42px;
+        margin-top: 32px;
+    }
+    .technologies-image {
+        position: absolute;
+        width: 240px;
+        margin-top: -72px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -322,8 +384,19 @@ body {
         height: 700px;
     }
     .introduction-text {
-        padding: 42px;
+        padding: 28px;
         margin-top: 240px;
+    }
+
+    .technologies-text {
+        margin-top: 160px;
+    }
+    .technologies-image {
+        position: absolute;
+        width: 240px;
+        margin-top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -338,6 +411,13 @@ body {
         padding: 22px;
         margin-top: 260px;
     }
+
+    .technologies-text {
+        padding: 32px;
+    }
+    .technologies-text > p {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 350px) {
@@ -348,6 +428,13 @@ body {
         padding: 18px;
     }
     .introduction-text > p {
+        font-size: 18px;
+    }
+
+    .technologies-text {
+        padding: 18px;
+    }
+    .technologies-text > p {
         font-size: 18px;
     }
 }
