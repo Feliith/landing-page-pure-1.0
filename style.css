@@ -211,6 +211,8 @@ body {
     background: var(--dark-theme-02);
     display: flex;
     margin-top: -8px;
+    height: 600px;
+    margin-top: -180px;
 }
 
 .technologies-text {
@@ -220,7 +222,7 @@ body {
     flex-direction: column;
     text-align: center;
     width: 100%;
-    padding-left: 64px;
+    padding-right: 64px;
     padding-bottom: 20px;
 }
 
@@ -240,12 +242,62 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 80%;
     padding-bottom: 20px;
 }
 
 .technologies-image > img {
     width: 70%;
+}
+
+.technologies-line {
+    background: var(--standard-color);
+    width: 90%;
+    height: 3px;
+    margin: auto;
+    margin-top: -3px;
+}
+
+
+
+.design {
+    background: var(--dark-theme-02);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+}
+
+.design-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 60%;
+    padding-left: 80px;
+}
+
+.design-text > h1 {
+    margin-bottom: 32px;
+    font-weight: 500;
+}
+
+.design-text > p {
+    color: var(--font-02);
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.design-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.design-image > img {
+    width: 80%;
 }
 
 
@@ -339,6 +391,12 @@ body {
     }
 }
 
+@media screen and (max-width: 800px) {
+    .technologies {
+        margin-top: -100px;
+    }
+}
+
 @media screen and (max-width: 700px) {
     .introduction {
         height: 600px;
@@ -374,8 +432,8 @@ body {
     }
     .technologies-image {
         position: absolute;
-        width: 240px;
-        margin-top: -72px;
+        width: 230px;
+        margin-top: -10px;
     }
 }
 
@@ -388,13 +446,16 @@ body {
         margin-top: 240px;
     }
 
+    .technologies {
+        height: 760px;
+    }
     .technologies-text {
-        margin-top: 160px;
+        margin-top: 220px;
     }
     .technologies-image {
         position: absolute;
         width: 240px;
-        margin-top: -10px;
+        margin-top: 90px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -412,11 +473,17 @@ body {
         margin-top: 260px;
     }
 
+    .technologies {
+        height: 700px;
+    }
     .technologies-text {
         padding: 32px;
     }
     .technologies-text > p {
         font-size: 20px;
+    }
+    .technologies-image {
+        width: 200px;
     }
 }
 
