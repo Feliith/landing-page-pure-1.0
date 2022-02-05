@@ -92,6 +92,16 @@ body {
     margin-top: -3px;
 }
 
+.nav-line.scroll {
+    position: fixed;
+    z-index: 10;
+    top: 83px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: fadeIn .5s forwards .3s;
+}
+
 .nav-links.on {
     transform: translateX(0);
 }
@@ -106,6 +116,14 @@ body {
 
 #line-03.burger-line.on {
     transform: rotate(-45deg) translateY(-7px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
 }
 
 @keyframes navMove {
