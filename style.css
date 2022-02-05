@@ -439,6 +439,9 @@ body {
     .nav-line {
         width: 100%;
     }
+    .nav-line.scroll {
+        top: 73px;
+    }
 }
 
 /* 800px > Introduction */
