@@ -34,6 +34,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    width: 100%;
+    transition: .5s;
+}
+
+.nav.scroll {
+    position: fixed;
+    z-index: 10;
 }
 
 .nav-burger {
@@ -99,6 +106,14 @@ body {
 
 #line-03.burger-line.on {
     transform: rotate(-45deg) translateY(-7px);
+}
+
+@keyframes navMove {
+    from {
+        transform: translateY(-100%);
+    } to {
+        transform: translateY(0);
+    }
 }
 
 @keyframes navLinkFade {

@@ -41,3 +41,20 @@ const machineAnimation = () => {
 
 }
 machineAnimation()
+
+const navScroll = () => {
+    const nav = document.querySelector('.nav')
+
+    window.onscroll = onScroll
+
+    function onScroll() {
+        if (window.scrollY < 300) {
+            nav.classList.remove('scroll')
+            nav.style.animation = ''
+        } else {
+            nav.classList.add('scroll')
+            nav.style.animation = 'navMove .3s'
+        }
+    }
+}
+navScroll()
