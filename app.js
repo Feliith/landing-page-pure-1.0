@@ -5,7 +5,7 @@ const Burger = () => {
     const navLink = document.querySelectorAll('.nav-link')
     const burgerLines = document.querySelectorAll('.burger-line')
 
-    navBurger.addEventListener("click", () => {
+    navBurger.onclick = () => {
         navLinks.classList.toggle('on')
         const navLinksOn = document.querySelector('.nav-links.on')
 
@@ -17,13 +17,13 @@ const Burger = () => {
             for (let c = 0 ; c < navLink.length ; c++) {
                 navLink[c].style.animation = ''
             }
-        }
+    }
         
         burgerLines[0].classList.toggle('on')
         burgerLines[1].classList.toggle('on')
         burgerLines[2].classList.toggle('on')
 
-    })
+    }
 }
 Burger()
 

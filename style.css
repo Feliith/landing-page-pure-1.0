@@ -340,19 +340,17 @@ body {
 
 .contacts {
     background: var(--dark-theme);
-    height: 300px;
+    height: 260px;
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-.contacts-text {
-    color: var(--font-02);
-    font-size: 18px;
-    width: 60%;
+    justify-content: space-around;
+    padding: 42px;
 }
 
 .contact {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     margin: 8px;
 }
 
@@ -481,15 +479,6 @@ body {
     .technologies {
         margin-top: -100px;
     }
-
-    .contacts {
-        flex-direction: column;
-    }
-    .contacts-text {
-        width: 80%;
-        margin-bottom: 40px;
-        text-align: center;
-    }
 }
 
 @media screen and (max-width: 700px) {
@@ -569,11 +558,6 @@ body {
         left: 50%;
         transform: translateX(-50%);
     }
-
-    .contacts-text {
-        font-size: 18px;
-        width: 90%;
-    }
 }
 
 @media screen and (max-width: 400px) {
@@ -613,10 +597,6 @@ body {
     }
     .design-image {
         width: 200px;
-    }
-
-    .contacts {
-        height: 400px;
     }
 }
 
