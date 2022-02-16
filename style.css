@@ -28,6 +28,10 @@ body {
     overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .nav {
     background: var(--dark-theme);
     height: 83px;
@@ -221,6 +225,7 @@ body {
 .introduction-text > a:hover {
     background-position: right;
     color: var(--dark-theme);
+    transform: scale(.9);
 }
 
 @keyframes rightFadeIn {
